@@ -1,16 +1,17 @@
 from aiogram import Dispatcher
 from dotenv import load_dotenv
-from project_name.lib import MyPlugin, MyApp, MyHandler
+from fedor_bot_idea.lib import  MyApp, MyHandler  # MyPlugin, MyApp, MyHandler
 
 from bot_lib import (
     BotConfig,
     setup_dispatcher,
 )
 from bot_lib.demo import create_bot, run_bot
-from bot_lib.plugins import GptPlugin
-
-plugins = [MyPlugin, GptPlugin]
-app = MyApp(plugins=plugins)
+# from bot_lib.plugins import GptPlugin
+from calmapp.plugins import LangChainPlugin
+# plugins = [MyPlugin, GptPlugin]
+# app = MyApp(plugins=plugins)
+app = MyApp(plugins=[LangChainPlugin])
 bot_config = BotConfig(app=app)
 
 # set up dispatcher

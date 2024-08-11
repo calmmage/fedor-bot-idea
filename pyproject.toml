@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "project-name"
+name = "fedor-bot-idea"
 version = "0.0.1"
 # Template Version: 0.0.2 # update dockerfile and add basic contents
 # Add scheduled job example
@@ -17,6 +17,7 @@ pytest = "*"
 # logging
 loguru = "*"
 toml = "*"
+matplotlib = "^3.9.0"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -25,6 +26,10 @@ tqdm = "*"
 # pandas = "2.1.0"
 black = "*"
 pre-commit = "*"
+langchain-anthropic = "*"
+langchain-openai = "*"
+langchain_community = "*"
+langchain = "*"
 
 [build-system]
 requires = ["poetry-core"]
